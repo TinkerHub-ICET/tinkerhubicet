@@ -1,0 +1,23 @@
+{
+  "name": "tinker-hub",
+  "version": "1.0.0",
+  "description": "Building a website for Tinker Hub",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch scss:assets/css"
+  },
+  "keywords": [
+    "Tinker",
+    "Bootstrap"
+  ],
+  "author": "Thaquidheen",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.44.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "autoprefixer": "^10.4.0",
+    "bootstrap": "^5.1.3"
+  }
+}

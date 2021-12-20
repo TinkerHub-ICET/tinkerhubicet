@@ -1,0 +1,263 @@
+
+#home-section{
+    background-color: #3AAFA9;
+  
+}
+
+body.active #home-section{
+    background-color: black;
+}
+
+.png{
+    position: relative;
+    top: 5.7rem;
+    // left: 3.5rem;
+    border-radius: 2.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+      .png{
+          position: relative;
+          top: -1.5rem;
+          left: -.0rem;
+      }
+  }
+
+
+  header.carousel {
+    height: 50%;
+}
+
+#Services{
+    background-color: aquamarine;
+}
+.intros{
+   //  background-color: #4ee975;
+   //  #8ecae6
+    position: relative;
+    top: 5.5rem;
+    border-radius: 2.5rem;
+    background: #DEF2F1;
+   //  background-color: #dff5ce;
+  
+    
+}
+.container-intros{
+    height: 100vh;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .intros{
+        background-color: bisque;
+        position: relative;
+        top: 1.5rem;
+        border-radius: 2.5rem;
+        
+    }
+}
+.image-col{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: -1.5rem;
+  
+}
+@media only screen and (max-width: 600px) {
+    .image-col{
+        position: relative;
+       top: 0.3rem;
+       
+      
+    }
+}
+.tinker{
+    position: relative;
+    top: -3.5rem;
+}
+@media only screen and (max-width: 600px) {
+    .tinker{
+        position: relative;
+       top: 0;
+    
+    }
+}
+
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 667px) 
+     {
+        #Services{
+           position: relative;
+           top: 7.5rem;
+           
+           
+        }
+     }
+
+
+     @media only screen 
+    and (device-width : 320px) 
+    and (device-height : 568px) 
+     {
+        #Services{
+           position: relative;
+           top: 12.5rem;
+           
+           
+        }
+     }
+
+
+     @media only screen 
+     and (device-width : 414px) 
+     and (device-height : 736px) 
+      {
+         #Services{
+            position: relative;
+            top: 3.5rem;
+            
+            
+         }
+      }
+
+
+
+      @media only screen 
+      and (device-width : 411px) 
+      and (device-height : 731px) 
+       {
+          #Services{
+             position: relative;
+             top: 3.5rem;
+             
+             
+          }
+       }
+
+       @media only screen 
+       and (device-width : 360px) 
+       and (device-height : 640px) 
+        {
+           #Services{
+              position: relative;
+              top: 9.5rem;
+              
+              
+           }
+           .faq-section{
+              top: 3.5rem;
+           }
+        }
+ 
+        @media only screen 
+        and (device-width : 1024px) 
+        and (device-height : 600px) 
+         {
+            .service_container{
+               position: relative;
+              
+               
+               
+            }
+         }
+
+         @media only screen 
+         and (device-width : 1024px) 
+         and (device-height : 600px) 
+          {
+             #Services{
+                position: relative;
+                top: 25.5rem;
+                
+                
+             }
+          }
+
+
+
+          @media only screen 
+          and (device-width : 458px) 
+          and (device-height : 1600px) 
+           {
+              #Services{
+                 position: relative;
+                 top: -45.5rem;
+                 
+                 
+              }
+           }
+
+           @media only screen 
+           and (device-width : 360px) 
+           and (device-height : 740px) 
+            {
+               #Services{
+                  position: relative;
+                  top: 3.5rem;
+                  
+                  
+               }
+            }
+
+
+            @media only screen 
+            and (device-width : 320px) 
+            and (device-height : 658px) 
+             {
+                #Services{
+                   position: relative;
+                   top: 6.5rem;
+                   
+                   
+                }
+             }
+
+
+
+             @media only screen 
+             and (device-width : 712px) 
+             and (device-height : 1138px) 
+              {
+                 #Services{
+                    position: relative;
+                    
+                    
+                    
+                 }
+                 .image-col{
+                     position: relative;
+                     top: -18.5rem;
+                 }
+                 .tinker{
+                     position: relative;
+                     top: -8.5rem;
+                 }
+                
+
+              }
+
+
+              @media only screen 
+              and (device-width : 320px) 
+              and (device-height : 568px) 
+               {
+                  .faq-section{
+                     position: relative;
+                     top: 8.5rem;
+                     
+                     
+                  }
+               }
+
+               @media only screen 
+               and (device-width : 375px) 
+               and (device-height : 812px) 
+                {
+                   .faq-section{
+                      position: relative;
+                      top: -2.5rem;
+                      
+                      
+                   }
+                }

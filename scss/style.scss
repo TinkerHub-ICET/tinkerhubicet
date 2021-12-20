@@ -1,0 +1,23 @@
+@use "custom";
+
+
+// IMPORT COMPONENTS
+
+@use 'Components/button';
+@use 'Components/mixin';
+@use 'Components/typography';
+
+
+
+
+
+
+// IMPORT SECTION
+
+@use 'Section/footer';
+@use 'Section/introSection';
+@use 'Section/navbar';
+@use 'Section/portfolio';
+@use 'Section/Services';
+@use 'Section/Testimonial';
+@use 'Section/about';

@@ -1,0 +1,96 @@
+.display-2{
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    color: rgb(8, 8, 8);
+
+
+    &--intro{
+        display: inline-block;
+        font-weight: 700;
+        margin-top: 10.5rem;
+       
+        
+        
+    }
+
+    &--description{
+        font-size: 2rem;
+        display: block;
+        margin-top: 2.0rem;
+        font-family: 'Roboto Condensed', sans-serif;
+        text-transform: none;
+        
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .display-2{
+        margin-bottom: 1rem;
+        text-transform: capitalize;
+        color: rgb(8, 8, 8);
+    
+    
+        &--intro{
+            display: inline-block;
+            font-weight: 700;
+            margin-top: 3.5rem;
+            
+            
+            
+        }
+    
+        &--description{
+            font-size: 1rem;
+            display: block;
+            margin-top: 2.0rem;
+            font-family: 'Roboto Condensed', sans-serif;
+            text-transform: none;
+        }
+    }
+  }
+
+
+.para{
+    margin-top: 6.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .para{
+        margin-top: 3.5rem;
+        
+    }
+}
+
+
+.scrollup{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -0-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(85, 59, 59);
+    font-size: 3px;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+    background: rgb(255, 255, 255);
+    bottom: 16px;
+    right: 20px;
+    height: 60px;
+    width: 50px;
+    border-radius: 5px;
+    position: fixed;
+  }
+  .scrollup.active{
+    bottom: 0.5rem;
+    pointer-events: auto;
+    opacity: 0.5;
+    transform: translateY(-55px);
+  }
+  .arrow{
+    font-size: 1.5rem;
+    color: black;
+  }
