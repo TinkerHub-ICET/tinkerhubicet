@@ -1,0 +1,972 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <title>Tinker Hub</title>
+</head>
+
+
+<style>
+
+  
+  .social_icons {
+    /* position: relative; */
+    display: flex;
+
+    margin-left: -2.5rem;
+
+    overflow: hidden;
+  }
+
+  .social_icons li {
+    list-style: none;
+    margin: 9px;
+
+
+  }
+
+  .social_icons li a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(109, 94, 94);
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    margin-top: 2.5rem;
+    color: aliceblue;
+
+
+  }
+
+  .social_icons li a:hover {
+    transform: rotate(360deg);
+    background: rgb(52, 47, 117);
+
+  }
+
+  .events {
+    border-radius: 1.5rem;
+  }
+
+  .events:hover {
+    background: rgb(185, 55, 55);
+  }
+
+  .text {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-top: 4.5rem;
+  }
+
+
+
+  /* Services */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   transition: all .2s linear; 
+    position: relative;
+    font-family: 'Oswald', sans-serif;
+  
+    
+  }
+
+  .service_container {
+    min-height: 100vh;
+    padding: 35px 12%;
+    background: white;
+
+  }
+
+  .service_container .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+
+  .service_container .box-container .box {
+    flex: 1 1 300px;
+    text-align: center;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+
+
+  }
+
+  .service_container .box-container .box i {
+    font-size: 40px;
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+    background: rgba(0, 0, 0, .1);
+    margin: 10px 0;
+    border-radius: 50%;
+    color: #9b8d8d;
+  }
+
+  .service_container .box-container .box h3 {
+    font-size: 25px;
+    color: rgb(136, 131, 125);
+
+  }
+
+  .service_container .box-container .box p {
+    font-size: 18px;
+    color: rgb(182, 180, 177);
+    padding: 5px;
+
+  }
+
+  .service_container .box-container .box .number {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    font-weight: bolder;
+    font-size: 50px;
+    color: white;
+  }
+
+  .service_container .box-container .box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition: .3s linear;
+    background: rgb(50, 54, 116);
+    clip-path: circle(28% at 5% 0);
+  }
+
+  /* 
+   .container .title{
+     text-align: center;
+     color: black;
+     font-size: 50px;
+     padding: 15px 0;     
+   } */
+
+  .service_container .box-container .box:hover::before {
+    clip-path: circle(100%);
+  }
+
+  .service_container .box-container .box:hover>* {
+    color: white;
+  }
+
+
+  @media(max-width:768) {
+    .service_container {
+      padding: 80px 20px;
+    }
+
+
+  }
+
+  .theme-toggler {
+    position: fixed;
+    top: 80px;
+    right: 25px;
+    padding: 15px 20px;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+  }
+
+  .theme-toggler:hover {
+    background: rgb(3, 2, 0);
+    color: white;
+  }
+
+  #theme-toggler.fa-sun {
+    transform: rotate(180%);
+  }
+
+  body.active {
+    background: rgb(12, 12, 12);
+  }
+  body.active.faq-section{
+    background-color: black;
+  }
+
+  body.active .service_container {
+    background-color: rgb(2, 2, 2);
+  }
+
+  body.active.service_container .box-container .box i {
+    background-color: white;
+  }
+
+  body.active.service_container .box-container .box h3 {
+
+    background-color: aliceblue;
+  }
+
+
+  body.active.service_container .box-container .box {
+
+    box-shadow: 0 5px 10px white;
+
+
+  }
+
+  body.active .service_container .our-service {
+    color: rgb(250, 248, 248);
+
+  }
+
+  body.active .intros {
+    background-color: black;
+  }
+
+  body.active .intros .display-2 .display-2--intro {
+    color: white;
+  }
+
+  body.active .intros .display-2 .display-2--description {
+    color: white;
+  }
+
+  body.active .intros img {
+    box-shadow: -6px 1px 31px 3px rgba(255, 255, 255, 0.43);
+    -webkit-box-shadow: -6px 1px 31px 3px rgba(255, 255, 255, 0.43);
+    -moz-box-shadow: -6px 1px 31px 3px rgba(255, 255, 255, 0.43);
+  }
+
+  body.active .black {
+    background-color: black;
+  }
+
+
+  .form-group {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid rgba(128, 128, 128, 0.199);
+    margin-top: 5px;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 24px;
+    border-radius: 8px;
+    font-family: "Montserrat";
+    color: rgb(27, 166, 247);
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s ease background-color;
+  }
+
+  button[type="submit"]:hover {
+    background-color: rgb(87, 129, 163);
+  }
+
+  #status {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+
+  #status.success {
+    background-color: rgb(211, 250, 153);
+    animation: status 4s ease forwards;
+  }
+
+  #status.error {
+    background-color: rgb(250, 129, 92);
+    color: white;
+    animation: status 4s ease forwards;
+  }
+
+  @keyframes status {
+    0% {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    90% {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    100% {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  .black{
+    background-color: rgb(163, 191, 192);
+  
+  }
+  /* .container{
+    min-height: 100vh;
+  } */
+
+  
+  .footer{
+    background-color: black;
+  }
+
+  /* hover navbar */
+
+  .color{
+    background-color: bisque;
+  }
+
+
+@media only screen 
+      and (device-width : 414px) 
+      and (device-height : 736px) 
+       {
+          #Services{
+             position: relative;
+             top: 3.5rem;
+             
+             
+          }
+       }
+
+
+       @media only screen 
+      and (device-width : 375px) 
+      and (device-height : 667px) 
+       {
+          .faq-section{
+             position: relative;
+             top: 2.5rem;
+             
+             
+          }
+       }
+     .black{
+       margin-top: 2.5rem;
+     }
+    .image-col{
+      margin-top: -7.5rem;
+      border-radius: 2.5rem;
+       
+    
+     
+    }
+    /* .png{
+      height: 100%;
+      width: 600px;
+     
+      position: relative;
+      top: 6.5rem;
+    } */
+
+    @media only screen 
+                   and (device-width : 375px) 
+                   and (device-height : 667px) 
+                   {
+                    .image-col{
+       margin-top: 0.2rem
+       ;
+     
+    } #Services{
+      margin-top: 3.5rem
+      ;
+    }  
+    .png{
+        
+      height: 100%;
+      width: 600px;
+     
+      position: relative;
+ 
+    } 
+     
+     
+      
+     
+    }
+                   }
+
+                   @media only screen 
+                   and (device-width : 414px) 
+                   and (device-height : 736px){
+                      .png{
+                      position: relative;
+                      top:3.5rem
+                      }
+                   } 
+
+
+
+
+                   @media only screen 
+                   and (device-width : 375px) 
+                   and (device-height : 812px){
+                      .image-col{
+                        margin-top: 1.5rem;
+                      } #Services{
+      margin-top: 3.5rem;
+    }  
+                   } 
+     
+</style>
+
+<body>
+
+
+
+  <section class="">
+    <nav class="navbar bg-white shadow fixed-top">
+      <div class="navbar__container bg-white  fixed-top">
+        <img src="TinkerHub_ICET (2).png" alt="Girl in a jacket" >
+        
+        <!-- <a href="#home" id="navbar__logo">Tinker Huber</a>   -->
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu mt-4">
+          <li class="navbar__item">
+            <a href="#home-section" class="navbar__links" id="home-page">Home</a>
+          </li>
+          <li class="navbar__item ">
+            <a href="#Services" class="navbar__links" id="service-page">Services</a>
+          </li>
+          <li class="navbar__item ">
+            <a href="#category" class="navbar__links text-secondary" id="category-page">Activities</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/about.html" class="navbar__links" id="about-page">About</a>
+          </li>
+          <!-- <li class="navbar__btn ">
+            <a href="#join" class="button" id="join-page">Join Tinker Hub</a>
+          </li> -->
+        </ul>
+      </div>
+      <div id="theme-toggler" class="far fa-moon theme-toggler"></div>
+    </nav>
+  </section>
+
+  <!-- INTRO SECTION -->
+
+  <section id="home-section" class=" container-intros ">
+    <div class="container  ">
+      <div class="row ">
+        <div class="col-md-6 intros  ">
+          <h1 class="display-2 tinker">
+            <span class="display-2--intro " data-aos="fade-left">TinkerHub ICET</span>
+            <span class="display-2--description lh-base">
+              --TinkerHub Foundation is a non-profit initiative aimed at making use of 21st-century technologies and
+              learning methods to foster a fresh breed of highly skilled young people empowered with technical and
+              social skills.--</span>
+          </h1>
+          <a href="https://join.tinkerhub.org/" ><button type="button" class="btn btn-dark  mt-3 text-center events">Join TinkerHub</button></a>
+          <ul class="social_icons">
+            <li><a href=""class="text-secondary"><i class="fa fa-linkedin" aria-hidden="true"></i>
+
+              </a></li>
+            <li><a href=""class="text-secondary"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 intros text-end hell">
+          <div class="image-col">
+            <img src="Colosseum_Two Color (1).png" class="img-fluid mt-5 png " alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Services -->
+
+
+
+  <section id="Services">
+    <div class="service_container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class=" text-center  our-service page-header" >--Our Services!--
+          </h1>
+        </div>
+      </div>
+      <div class="box-container row mt-5">
+        <div class="box col-md-3"data-aos="fade-up-right">
+          <span class="number">01</span>
+          <i class="fas fa-book-open "></i>
+          <h3 >How To Learn</h3>
+          <p>At the core, we are all students - learning how to learn is in itself a
+            superpower in this fast-changing world we've to adapt. We
+            encourage to learn and support them.</p>
+        </div>
+        <div class="box col-md-3"data-aos="fade-up-right">
+          <span class="number">02</span>
+          <i class="fas fa-infinity"></i>
+          <h3>Unlimited Resources</h3>
+          <p>Being part of the right people gives access to the best resources
+            to learn ANYTHING curated from all over the internet. We're all
+            learners at the end of the day, and that's what keeps the curiosity
+            voyage sailing away.</p>
+        </div>
+        <div class="box col-md-3"data-aos="fade-up-right">
+          <span class="number">03</span>
+          <i class="fas fa-hourglass-start"></i>
+          <h3>Building Projects</h3>
+          <p>Start making something we've always wanted to? How about we
+            bring our wildest ideas into reality? Build Projects you're genuinely
+            passionate about & await to see the impact it can have on the
+            life's of people. </p>
+        </div>
+        <div class="box col-md-3"data-aos="fade-up-right">
+          <span class="number">04</span>
+          <i class="fas fa-laptop-code"></i>
+          <h3>Hackathons</h3>
+          <p>Take a problem, sit for 48 hours in a stretch, brainstorm as a
+            team, experiment with friends, geek out over possibilities? That's
+            where the magic begins. Hackathons are designed to stimulate
+            your brains and get some highly creative solutions for a given set
+            of problems. </p>
+        </div>
+        <div class="box col-md-3"data-aos="fade-up-right" >
+          <span class="number">05</span>
+          <i class="fas fa-users"></i>
+          <h3>Bootcamp</h3>
+          <p>Learn What Matters. Bootcamps are selectively curated learning
+            resources, that gives you an bottom-to-top in a nutshell idea
+            about something you've always wanted to explore! Led by your
+            peers or industry experts, they're handcrafted into learning for the
+            love of learning.</p>
+        </div>
+        <div class="box col-md-3"data-aos="fade-up-right">
+          <span class="number">06</span>
+          <i class="fas fa-network-wired"></i>
+          <h3>Internship</h3>
+          <p>Skills paves the way into being a part of companies, interning &
+            understanding their culture with an hands-on experience of an
+            real-life work environment all when you're still a student. Could this
+            be more exciting?</p>
+        </div>
+        <div class="box col-md-3"data-aos="fade-up-right">
+          <span class="number">07</span>
+          <i class="fas fa-graduation-cap"></i>
+          <h3>Scholership</h3>
+          <p>Learning something you've always wanted to, but could pursue
+            because of financial constraints? Scholarships to the rescue!
+            Theses are fully-funded programs by organizations that seek
+            towards empowering people even more. Be extremely curious,
+            never stop learning & grab the best of scholarships!</p>
+        </div>
+        <div class="box col-md-3"data-aos="fade-up-right">
+          <span class="number">08</span>
+          <i class="fas fa-school"></i>
+          <h3>Campus</h3>
+          <p>Finding people who love everything you are too very much into?
+            How about coming together, sharing the energy, celebrating,
+            experimenting & finding the tribe you belong to? This is the vibe of
+            Campus Communities. Be A Change-maker within your campus</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Faq -->
+
+  <section class=" faq-section">
+    <div class="container mt-5">
+      <div class="row mt-5">
+        <h1 class="text-center  page-header">FAQS</h1>
+        <div class="mt-3 mb-3">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item mt-4 shadow">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-aos="fade-up"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Why the campus community?
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">The world is changing faster now than during any period of time in human
+                  history. The job market is rapidly changing and the tools for learning are also evolving.
+                  To survive these massive waves of change, we just have to adapt. In the process, we also need to
+                  ensure that no one gets left behind as the world goes digital. And so,
+                  we put the club in place to make sure that our young generation gets access to tools required to
+                  participate in and contribute to 21st century technology advancements.
+                  For the last five years, we have been thinking about what will help us to achieve the goal. And here’s
+                  what we found: To be flag bearers of a change of this scale, we need our students to innovate, learn
+                  to learn, solve problems and collaborate on a massive scale. We have built programs, projects and
+                  resources that revolve around these core areas.</div>
+              </div>
+            </div>
+            <div class="accordion-item mt-4 shadow">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"data-aos="fade-up"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  What is TinkerHub Campus Community?
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><b>Campus Community</b> is a part of TinkerHub initiatives to empower students
+                  with access to the knowledge they need to thrive in the new world. <b>Campus Community</b> is run by
+                  students and industry experts to achieve the same goal. Together, we will help the next generation set
+                  the course for a better future.
+
+                  <b>Campus Community</b> is for school and college students who want to learn and teach technology. (We
+                  want them to understand and embrace the power of critical thinking, problem-solving, innovation and
+                  entrepreneurship. )</div>
+              </div>
+            </div>
+            <div class="accordion-item mt-4 shadow">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"data-aos="fade-up"
+                  data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  What’s Campus Community’s focus and why?
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><b>Creativity:</b> In the age of information overload, getting original
+                  ideas from people has become quite a difficult task. Kids, especially, have a creative streak that
+                  they tend to shed in school owing to judgement, peer pressure and parental pressure. We believe that
+                  creativity is what sets us all apart as unique individuals and that it is indispensable to our
+                  functioning as a human and a coder. Perhaps this is what led us to zero in on creativity as a major
+                  focus area.
+
+                  <b>Problem solving</b>: Coders are fundamentally people who make life simpler by solving problems. Any
+                  budding coder will need to learn how much difference they can make with the right approach to solving
+                  a problem.
+
+                  <b>Learn to learn:</b> It is well understood that the world that we live in is under constant
+                  evolution. Various technologies present themselves at every turn of the industry. To move on ahead,
+                  you have to learn to learn new things quickly and somewhat deeply. We focus on how to get students to
+                  think for themselves and take in new things without getting disoriented.
+
+                  <b>Collaboration:</b> To be able to put across your ideas and solutions to people, including students,
+                  professionals, college-goers or startup founders, you need to be able to connect and communicate with
+                  people effortlessly. Polishing your networking skills, learning how to present your thoughts in
+                  meetings and working with people are the bedrock of your ability to collaborate.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mt-4 shadow">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"data-aos="fade-up"
+                  data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                  What are the activities of the Community?
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Anything that helps the students to achieve new skills. We will provide a tentative yearly plan to every club so that they can focus on right things — however,
+                   this plan can be (should be) challenged by the members of the club and make it better and suitable for them.
+                   We will stick to our values when we select the topics/projects.
+                  If you are looking for self-learning, collaborative learning and contribution to your team’s learning,
+                   this is what it’ll look like: workshops, bootcamps, weekly/bi-weekly meet-ups, hosting conference - in short,
+                    from Augmented Reality workshops to how to create a LinkedIn profile — all with a pinch of fun.
+                   We also hone talent to compete in international technical contests, hackathons and challenges. li.</div>
+              </div>
+            </div>
+            <div class="accordion-item mt-4 shadow">
+              <h2 class="accordion-header" id="flush-headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"data-aos="fade-up"
+                  data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                  But, y coding?
+                </button>
+              </h2>
+              <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Coding is more than just a career skill. It is a language of creativity and
+                  problem-solving. Coding is a fundamental skill in the digital age that we live in. At <b>Campus
+                    Community</b>, we show kids their unlimited creative potential and help them leverage their coding
+                  skills for problem-solving.</div>
+              </div>
+            </div>
+            <div class="accordion-item mt-4 shadow">
+              <h2 class="accordion-header" id="flush-headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"data-aos="fade-up"
+                  data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                  Who is a member?
+                </button>
+              </h2>
+              <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Anyone currently attending school/college.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact -->
+
+  <section class="black">
+    <div class="container ">
+      <div class="row mt-5">
+        <h1 class="page-header text-center text-white">Get In Touch</h1>
+        <div class="col-md-6 mt-3">
+          <img src="Full Inbox _Monochromatic.png" alt="" class="img-fluid ">
+        </div>
+
+        <div class="col-md-6">
+          <form action="https://formspree.io/f/xoqrqpzz" method="POST" id="my-form">
+            <div class="form-group text-white">
+              <label for="firstName "> First Name</label>
+              <input type="text" id="firstName" name="firstName">
+            </div>
+
+            <div class="form-group text-white">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName">
+            </div>
+
+            <div class="form-group text-white">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group text-white">
+              <label for="massage">Massage</label>
+              <textarea name="massage" id="massage" cols="8" rows="6"></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+
+
+      </div>
+    </div>
+    <div id="status"></div>
+  </section>
+
+  <a href="" class="scrollup ">
+    <i class="fas fa-arrow-up arrow "  aria-hidden="true"></i>
+  
+  </a>
+
+
+<!-- footer -->
+<section class="footer">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+          <span class="text-white ">&copy; 2021 All Rights Reserved,ICET</span>
+          <p>Designed By Thaquidheen </p>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+
+  <!-- Navbar Javascript -->
+  <script>
+
+
+
+    const menu = document.querySelector('#mobile-menu');
+    const menuLinks = document.querySelector('.navbar__menu');
+    // Display mobile menu  
+    const mobieMenu = () => {
+      menu.classList.toggle('is-active')
+      menuLinks.classList.toggle('active')
+    }
+    menu.addEventListener('click', mobieMenu)
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Hello World";
+    }
+
+
+
+
+
+  </script>
+
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://kit.fontawesome.com/494cb1cf2c.js" crossorigin="anonymous"></script>
+
+
+  <!-- Darkmode -->
+  <script>
+    let themeToggler = document.querySelector('#theme-toggler');
+
+    themeToggler.onclick = () => {
+      themeToggler.classList.toggle('fa-sun');
+
+      if (themeToggler.classList.contains('fa-sun')) {
+        document.body.classList.add('active');
+      } else {
+        document.body.classList.remove('active');
+      }
+    }
+  </script>
+
+  <!-- form message -->
+
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      // get the form elements defined in your form HTML above
+
+      var form = document.getElementById("my-form");
+      // var button = document.getElementById("my-form-button");
+      var status = document.getElementById("status");
+
+      // Success and Error functions for after the form is submitted
+
+      function success() {
+        form.reset();
+        status.classList.add("success");
+        status.innerHTML = "Thanks!";
+      }
+
+      function error() {
+        status.classList.add("error");
+        status.innerHTML = "Oops! There was a problem.";
+      }
+
+      // handle the form submission event
+
+      form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+      });
+    });
+
+    // helper function for sending an AJAX request
+
+    function ajax(method, url, data, success, error) {
+      var xhr = new XMLHttpRequest();
+      xhr.open(method, url);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+        if (xhr.status === 200) {
+          success(xhr.response, xhr.responseType);
+        } else {
+          error(xhr.status, xhr.response, xhr.responseType);
+        }
+      };
+      xhr.send(data);
+    }
+
+  </script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init({
+  
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 60, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
+</script>
+
+<script>
+  const scrollup = document.querySelector('.scrollup');
+  window.addEventListener('scroll',()=>{
+    if(window.pageYOffset>100){
+      scrollup.classList.add('active');
+
+    }else{
+      scrollup.classList.remove('active')
+    }
+  });
+</script>
+
+
+
+</html>
