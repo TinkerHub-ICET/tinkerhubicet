@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<!-- puthiya -->
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="lib/animate/animate.min.css" rel="stylesheet">
+
+
+<link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+
+
+
+<title>Tinker Hub</title>
+
+
+
+
+</head>
+
+
+<style>
+  
+  * {
+    margin: 0;
+    padding: 0;
+
+
+  
+    font-family: 'Oswald', sans-serif;
+ 
+    
+  }
+
+
+
+.sceen{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+
+
+.social_icons{
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  margin-top: -0.5rem;
+ margin-left: -2.5rem;
+  overflow: hidden;
+}
+.social_icons li{
+  list-style: none;
+  margin: 4px;
+}
+.social_icons li a{
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: chartreuse;
+  text-decoration: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: 0.5s;
+}
+.social_icons li a:hover{
+  transform: rotate(360deg);
+}
+
+.team-role{
+  font-size: 1.5rem;
+  margin-top: -5.5rem;
+}
+
+
+
+
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $bg-light;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar {
+    background-color: $bg-dark;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    position: relative;
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        text-transform: uppercase;
+        letter-spacing: 4px;
+
+        margin: 1rem;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    .nav-toggle {
+        width: 32px;
+        height: 20px;
+
+        margin : 1rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        position: absolute;
+        top: 3.5px;
+        right: 0;
+
+        .bar {
+            height: 3px;
+            width: 100%;
+
+            background-color: white;
+
+            transition: transform 250ms ease-in-out;
+        }
+
+        .bar1.active {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .bar2.active {
+            transform: scale(0);
+        }
+
+        .bar3.active {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+
+        background-color: $bg-medium;
+
+        text-align: center;
+
+        ul {
+            list-style: none;
+
+            li {
+                margin-block: 1rem;
+                margin-inline: 2rem;
+                font-size: 1.25rem;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .navbar {
+        .logo {
+            margin-block: 1rem;
+            margin-inline: 2rem;
+        }
+
+        .nav-toggle {
+            margin-block: 1rem;
+            margin-inline: 2rem;
+        }
+    }
+}
+
+@media screen and (min-width: 840px) {
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+
+        .nav-toggle {
+            display: none;
+        }
+
+        .nav-links {
+            display: block;
+            width: unset;
+            background-color: $bg-dark;
+
+            ul {
+                display: flex;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+    .display{
+      font-size: 1.5rem;
+    }
+}
+
+.scrollup{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -0-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(85, 59, 59);
+    font-size: 3px;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+    background: rgb(255, 255, 255);
+    bottom: 16px;
+    right: 25px;
+    height: 60px;
+    width: 50px;
+    border-radius: 5px;
+    position: fixed;
+  }
+  .scrollup.active{
+    bottom: 0.5rem;
+    pointer-events: auto;
+    opacity: 0.5;
+    transform: translateY(-55px);
+  }
+  .arrow{
+    font-size: 1.5rem;
+  }
+
+  /* sgoiergyreusgh */
+
+  .page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #795e5e;
+  color: #a19f9f;
+}
+
+.page-header:hover {
+  cursor: pointer;
+  color: black;
+}
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.5rem;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-right: 0.5rem;
+  color: #6c757d;
+  content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */;
+}
+.breadcrumb-item.active {
+  color: #6c757d;
+}.box {
+  box-shadow: 10px 10px 51px 26px rgba(255, 247, 247, 0.79);
+  -webkit-box-shadow: 10px 10px 51px 26px rgba(255, 247, 247, 0.79);
+  -moz-box-shadow: 10px 10px 51px 26px rgba(255, 247, 247, 0.79);
+  border-radius: 50%;
+}.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #cab0b0;
+  border-radius: 4px;
+}
+
+.breadcrumb > li {
+  display: inline-block;
+}
+
+.breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: snow;
+  content: "/ ";
+}
+
+.breadcrumb > .active {
+  color: #777;
+}.para {
+  margin-top: 6.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .para {
+    margin-top: 3.5rem;
+  }
+}
+.page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #795e5e;
+  color: #a19f9f;
+}
+
+.page-header:hover {
+  cursor: pointer;
+  color: black;
+}
+.card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  background: #000000;
+  background: linear-gradient(90deg, #ffffff 80%, #000000 0%);
+  background: -webkit-linear-gradient(90deg, #000000 0%, #ffffff 80%);
+  background: -moz-linear-gradient(90deg, #000000 0%, #ffffff 80%);
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.images {
+  position: absolute;
+  transition: 0.5s;
+  transform-origin: top;
+  object-fit: cover;
+  overflow: hidden;
+  object-fit: fill;
+  height: 100%;
+}
+
+.card:hover .images {
+  transform: translateY(30px) scale(0.5);
+  border-radius: 20%;
+}
+
+.card-text {
+  margin-top: 20.5rem;
+}
+
+@media only screen and (device-width: 768px) and (device-height: 1024px) {
+  .images {
+    position: absolute;
+    transition: 0.5s;
+    transform-origin: top;
+    object-fit: cover;
+    overflow: hidden;
+    object-fit: fill;
+    height: 100%;
+  }
+
+  .card {
+    position: relative;
+    width: 250px;
+    height: 100%;
+    background: #000000;
+    background: linear-gradient(90deg, #ffffff 80%, #000000 0%);
+    background: -webkit-linear-gradient(90deg, #000000 0%, #ffffff 80%);
+    background: -moz-linear-gradient(90deg, #000000 0%, #ffffff 80%);
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+}
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.items {
+  display: flex;
+  max-width: fit-content;
+  max-width: 600px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.items span {
+  padding: 7px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #ffffff;
+  border-radius: 2.5rem;
+  border: 2px solid #007bff;
+  transition: all 0.3s ease;
+}
+
+.items span:hover {
+  color: #fff;
+  background: #007bff;
+}
+
+.items span.active {
+  background-color: cornflowerblue;
+}
+
+@media only screen and (max-width: 600px) {
+  .items span {
+    padding: 5px 25px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #f9fcff;
+    border-radius: 2.5rem;
+    border: 2px solid #007bff;
+    transition: all 0.3s ease;
+  }
+}
+ 
+</style>
+
+
+
+
+
+
+<body class="bg-dark">
+
+
+
+
+
+
+<section >
+    <div class="container " id="About">
+        <div class="row"> 
+          <!-- Heading Section -->
+          <div class="col-lg-12">
+            <h1 class="page-header text-white">About
+                
+            </h1>
+            <ol class="breadcrumb ">
+                <li><a href="index.html">Home</a>
+                </li>
+                <li class="active">About</li>
+            </ol>
+        </div>
+            <!-- Content Section -->
+            <div class="col-md-6 ">
+              <div>
+                <img src="Team meeting_Flatline (1).png" class="img-fluid mt-5 box " alt="">
+              </div>
+            </div>
+            <div class="col-md-6 text-white para" >
+             
+            <p data-aos="fade-up" class="display">
+              Tinkerhub ICET is a non-profit techie community fucntioning to empower students to advance their technical and social skills.
+              We provide a peer to peer learning environment for all the enthusiastic students in our campus and we make sure all of them have equal opportunities to develop their innovative ideas into action.We also have a group of tech enthusiasts and innovators as our mentors to help  the students to avail the necessary guidance and inspiration.
+              </p>
+          </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- TEAM -->
+
+<section class="Teams"data-aos="fade-up" >
+  <div class="container container-team">
+    <h2 class="page-header text-white text-center mt-5 " >Our Crew</h2>
+    
+      <!-- filter Items -->
+
+
+      <nav>
+        <div class="items">
+          <span class="item  navbar__btn" data-filter="all">All</span>
+          <span class="item navbar__btn" data-filter="facculties">Facculties</span>
+          <span class="item navbar__btn" data-filter="mentors">Mentors</span>
+          <span class="item navbar__btn" data-filter="teams">Core Teams</span>
+        </div>
+      </nav>
+    <div class="row "data-aos="flip-left">
+        
+      <div class="col mt-3 sceen item-box facculties"> 
+        <div class="card">
+          <img src="images/Arunkumar.jpeg"class="card-img-top images " alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Arun Kumar M </h3>Facculty Lead</p>
+            <!-- <ul class="social_icons">
+              <li><a href="""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href="""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="mt-3 col  sceen item-box facculties"  > 
+        <div class="card">
+          <img src="images/safiya image1 (1).jpg" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Safiya KM</h3>Facculty Co-Lead</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+      <div class="col  mt-3  sceen item-box teams"> 
+        <div class="card">
+          <img src="/images/ashwin.jpg" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Ashwin T Sunil </h3>Campus Lead</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="col mt-3 sceen item-box teams"> 
+        <div class="card">
+          <img src="images/Arya.jpeg" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Arya George </h3>Campus Co-Lead</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+      <div class="col  mt-3  sceen item-box teams"> 
+        <div class="card">
+          <img src="/images/shehansha.jpg" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Muhammed Shehansha</h3>Tech Lead</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mt-3 sceen item-box teams"> 
+        <div class="card">
+          <img src="images/irfan.jpeg" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Irfan Ahammed Fayaz  </h3>Tech Co-Lead</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+  
+      <div class="col mt-3 sceen item-box teams"> 
+        <div class="card">
+          <img src="images/Jebin.jpeg"class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Jebin</h3>Medai Lead</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+
+    
+       <div class="col  mt-3 sceen item-box teams"> 
+        <div class="card">
+          <img src="images/fazal.jpg" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Fazal Bin Savad</h3>Media Co-Lead</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div> 
+
+     
+       <div class="col  mt-3 sceen item-box teams "> 
+        <div class="card">
+          <img src="" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Abdul Haseeb</h3>Outreach Lead</p>
+             <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>  -->
+          </div>
+        </div>
+      </div> 
+     
+       <div class="col  mt-3 sceen item-box teams"> 
+        <div class="card">
+          <img src="" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Muhammed Riza</h3>Outreach Co-Lead</p>
+             <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>  -->
+          </div>
+        </div>
+      </div> 
+
+      <div class="col  mt-3  sceen item-box teams"> 
+        <div class="card">
+          <img src="images/thaqu-3.jpg" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Thaquidheen M A </h3>Web Develepor</p>
+             <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>  -->
+          </div>
+        </div>
+      </div>
+
+     
+
+  
+
+      <div class="col mt-3 sceen item-box teams"> 
+        <div class="card">
+          <img src="/images/Aman kukku.jpeg" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Aman Rasheed</h3>Web Co-lead</p>
+             <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>  -->
+          </div>
+        </div>
+      </div>
+
+   
+
+       <div class="col mt-3 sceen item-box teams"> 
+        <div class="card">
+          <img src="" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Yazin Kaanam</h3>Creative Lead</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div> 
+
+      <div class="col mt-3 sceen item-box teams"> 
+        <div class="card">
+          <img src="images/afeef.jpeg" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Afeef Salim</h3>Creative Co-Lead</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+
+       <div class="col mt-3 sceen item-box teams"> 
+        <div class="card">
+          <img src="" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Farsana K A </h3>Women In Tech</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div> 
+
+      <div class="col mt-3 sceen item-box teams"> 
+        <div class="card">
+          <img src="" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Sona</h3>Women In Tech Co-lead</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div> 
+
+      <div class="col mt-3 sceen item-box teams"> 
+        <div class="card">
+          <img src="images/shakeeb.jpg" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Muhammed Shakeeb </h3>Event Lead</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+
+       <div class="col mt-3 sceen item-box teams"> 
+        <div class="card">
+          <img src="" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Shasaman </h3>Event Co-Lead</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div> 
+
+      <div class="col mt-3 sceen item-box teams"> 
+        <div class="card">
+          <img src="images/fathimabheevi.jpg" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Fathima Bheevi </h3>Content Lead</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col mt-3 sceen item-box teams"> 
+        <div class="card">
+          <img src="images/aysha.jpg" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Aisha Fidha </h3>Content Co-Lead</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col mt-3 sceen item-box teams"> 
+        <div class="card">
+          <img src="images/Hazna.jpeg" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Hazna M Khalid</h3>Documentation Lead</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+
+       <div class="col mt-3 sceen item-box teams"> 
+        <div class="card">
+          <img src="" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Fahmitha </h3>Documentation Co-Lead</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div> 
+
+      <div class="col mt-3 sceen item-box mentors"> 
+        <div class="card">
+          <img src="images/Muhsin.jpeg" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role">Muhsin Sulfeeker</h3>Mentor</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+
+       <div class="col mt-3 sceen item-box mentors"> 
+        <div class="card">
+          <img src="" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role"></h3>Mentor</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div> 
+
+       <div class="col mt-3 sceen item-box mentors"> 
+        <div class="card">
+          <img src="" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role"></h3>Mentor</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div> 
+<
+      <div class="col mt-3 sceen item-box mentors"> 
+        <div class="card">
+          <img src="" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role"> </h3>Mentor</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div> 
+
+       <div class="col mt-3 sceen item-box mentors"> 
+        <div class="card">
+          <img src="" class="card-img-top images" alt="...">
+          <div class="card-body text-white text-center">
+            <p class="card-text "><h3 class="text-white team-role"> </h3>Mentor</p>
+            <!-- <ul class="social_icons">
+              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a></li>
+              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div> 
+
+      
+
+ 
+   
+   
+
+     
+    
+    
+    </div>
+  </div>
+</section>
+
+<a href="" class="scrollup ">
+  <i class="fa fa-arrow-up arrow "  aria-hidden="true"></i>
+
+</a>
+
+
+
+
+<!-- footer -->
+<section class="footer bg-secondary mt-5">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+          <span class="text-white ">&copy; 2021 All Rights Reserved,ICET</span>
+          <p>Designed By Tinkerhub Web Team ICET</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script>
+  const scrollup = document.querySelector('.scrollup');
+  window.addEventListener('scroll',()=>{
+    if(window.pageYOffset>100){
+      scrollup.classList.add('active');
+
+    }else{
+      scrollup.classList.remove('active')
+    }
+  });
+</script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"></script>
+
+   <script>
+    const menu = document.querySelector('#mobile-menu');
+    const menuLinks = document.querySelector('.navbar__menu');
+    // Display mobile menu  
+    const mobieMenu = () => {
+      menu.classList.toggle('is-active')
+      menuLinks.classList.toggle('active')
+    }
+    menu.addEventListener('click', mobieMenu)
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Hello World";
+    }
+</script> 
+
+
+
+
+
+
+<!-- <div
+data-aos="fade-up"
+data-aos-offset="200"
+data-aos-delay="50"
+data-aos-duration="1000"
+data-aos-easing="ease-in-out"
+data-aos-mirror="true"
+data-aos-once="false"
+data-aos-anchor-placement="top-center"
+>
+</div> -->
+
+
+
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
+</script>
+
+
+<!-- 
+  rkdsughareijgoesrm
+ -->
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.item').click(function(){
+        const value = $(this).attr('data-filter');
+        if (value=='all'){
+          $('.item-box').show('1000');
+        }else{
+          $('.item-box').not('.'+value).hide('1000'); 
+          $('.item-box').filter('.'+value).show('1000'); 
+        }
+      })
+      //  $('.item').click(function(){
+      //    $(this).addClass('active')
+      // })
+    })
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+</body>
+
+</html>
