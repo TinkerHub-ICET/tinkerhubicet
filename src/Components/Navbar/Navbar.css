@@ -1,0 +1,51 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    align-items: center;
+    padding-block: 15px;
+}
+.navBrand{
+    margin-left: 10px;
+    width: 250px;
+}
+.navbar-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-inline-end: 20px;
+}
+.navbar-right .navbar-item{
+    margin-left: 30px;
+}
+.navbar-right .navbar-item .navLink{
+    text-decoration: none;
+    color: #000;
+    transition: all 5s ease-in-out;
+}
+.navbar-right .navbar-item .navLink:hover{
+    text-decoration: underline;
+}
+.hamBurgerIcon{
+    display: none;
+    margin-inline-end: 20px;
+}
+@media only screen and (max-width:630px){
+    .navBrand{
+        width: 30%;
+        height: 30%;
+    }
+    .navbar-right{
+        display: none;
+        flex-direction: column;
+    }
+    .navbar-right .navbar-item{
+        margin-left: 0;
+        margin-block-end: 10px;
+    }
+    .hamBurgerIcon{
+        display: block;
+    }
+  }
